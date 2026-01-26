@@ -1,21 +1,25 @@
-# React + TypeScript + Vite
+# HIMSOLS Frontend (Vite + React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the HIMSOLS frontend app (tree listing + order form) built with Vite + React (TypeScript).
 
-While this project uses React, Vite supports many popular JS frameworks. [See all the supported frameworks](https://vitejs.dev/guide/#scaffolding-your-first-vite-project).
+## Features
+- View a list of trees
+- Select a tree to buy
+- Fill out an order form
+- Place an order
 
-## Deploy Your Own
+## Setup
+1. Install deps:
+   - `npm install`
+2. Configure env:
+   - Copy `.env.example` → `.env`
+   - Set:
+     - `VITE_API_BASE_URL=https://himsols.onrender.com`
+3. Run dev server:
+   - `npm run dev`
 
-Deploy your own Vite project with Vercel.
+## Vercel Deploy
+Set this environment variable in Vercel Project Settings:
+- `VITE_API_BASE_URL` = `https://himsols.onrender.com`
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/examples/tree/main/framework-boilerplates/vite-react&template=vite-react)
-
-_Live Example: https://vite-react-example.vercel.app_
-
-### Deploying From Your Terminal
-
-You can deploy your new Vite project with a single command from your terminal using [Vercel CLI](https://vercel.com/download):
-
-```shell
-$ vercel
-```
+Then deploy normally (Vercel will run `npm run build` and serve `dist/`).
